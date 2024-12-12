@@ -7,6 +7,10 @@
 
 }
 
+*:not(i) {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 header a {
     color: #000;
 }
@@ -19,10 +23,125 @@ header a {
     display: none !important;
 }
 
+.card {
+    height: 270px !important;
+}
+
+.card-title-no {
+    font-size: 55px;
+    /* Increase the font size */
+    font-weight: bold !important;
+    /* Make the font bold */
+    font-family: Arial, sans-serif !important;
+    /* Use a font that has a clean, sharp style */
+    line-height: 1;
+    /* Adjust line height to ensure proper spacing */
+    -webkit-text-stroke: 2px black !important;
+    /* Add a black outline */
+    color: white !important;
+    /* Set the fill color (inside) */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+
+    &>div {
+        width: 80%;
+        height: 70%;
+    }
+}
+
+.card .card-text {
+    font-size: 13px;
+}
+
+.sign-up-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-sec>div {
+    flex: 1;
+}
+
+.sign-up-sec .head {
+    width: 70%;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.sign-up-sec form {
+    border: 1px solid #000;
+
+    &>input {
+        outline: none;
+        padding: 4px 10px;
+    }
+}
+
+/* footer styling */
+
+.footer-top>div {
+    flex: 1;
+}
+
+a {
+    text-decoration: none !important;
+
+    &:hover {
+        text-decoration: underline !important;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .nav-icon {
         display: block !important;
     }
 
-    body {}
+    .sign-up-sec {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .sign-up-sec :is(div, form) {
+        width: 100%;
+    }
+
+    .sign-up-sec .head {
+        width: 100%;
+    }
+
+    form>input {
+        width: 60%;
+        margin-right: 5%;
+    }
+
+    form>button {
+        margin-left: 5%;
+        width: 30%;
+    }
+    .hero-content>div:first-child{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .w-lg-60 {
+        width: 60% !important;
+    }
+
+    .w-lg-40 {
+        width: 40% !important;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    .hero-content >div{
+        width: 100%;
+        height: 100%;
+    }
 }
